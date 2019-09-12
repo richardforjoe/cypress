@@ -8,7 +8,7 @@ cy.fixture('formdata.json').as('users')
   })
 describe('Successfull Form Submission - Dynamic tests', function() {
 context('data generated from file', () => {
-const users = require('C:/Users/richard.forjoe/baeproject/cypress/cypress/fixtures/formdata.json')
+const users = require('C:/Users/richard.forjoe/baeproject/cypress/fixtures/formdata.json')
 
 it('.submit() - submit a form when only Mandatory fields are populated', function ()  {
 
@@ -53,7 +53,7 @@ cy.get('.confirmation-message')
 
 describe('Failed Validation Form Submission', function() {
 context('data generated from file', () => {
-const users = require('C:/Users/richard.forjoe/baeproject/cypress/cypress/fixtures/formdata.json')
+const users = require('C:/Users/richard.forjoe/baeproject/cypress/fixtures/formdata.json')
 
 it('cy.reload() - reload the page', () => {
     // https://on.cypress.io/reload
@@ -64,11 +64,10 @@ it('Submit when no Mandatory fields are populated', function ()  {
 
     //const count = 0
     cy.get('.link-button').click();
-
-cy.get('#scheme-error').should('contain', 'This field is required.').should('have.css', 'border').and('be.colored', '#DA032C')
-cy.get('#fullName-error').should('contain', 'This field is required.').should('have.css', 'border').and('be.colored', '#DA032C')
-cy.get('#DOB-error').should('contain', 'This field is required.').should('have.css', 'border').and('be.colored', '#DA032C')
-cy.get('#member-number-error').should('contain', 'This field is required.').should('have.css', 'border').and('be.colored', '#DA032C')
+cy.get('#scheme-error').should('contain', 'This field is required.').should('have.css', 'border').and('match', /0px none rgb(218, 3, 44)/)
+cy.get('#fullName-error').should('contain', 'This field is required.').should('have.css', 'border').and('match', /0px none rgb(218, 3, 44)/)
+cy.get('#DOB-error').should('contain', 'This field is required.').should('have.css', 'border').and('match', /0px none rgb(218, 3, 44)/)
+cy.get('#member-number-error').should('contain', 'This field is required.').should('have.css', 'border').and('match', /0px none rgb(218, 3, 44)/)
   })
 
   })
