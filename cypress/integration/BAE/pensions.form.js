@@ -64,12 +64,11 @@ it('Submit when no Mandatory fields are populated', function ()  {
 
     //const count = 0
     cy.get('.link-button').click();
-cy.get('#scheme-error').should('contain', 'This field is required.').should('have.css', 'border').and('match', /0px none rgb(218, 3, 44)/)
-cy.get('#fullName-error').should('contain', 'This field is required.').should('have.css', 'border').and('match', /0px none rgb(218, 3, 44)/)
-cy.get('#DOB-error').should('contain', 'This field is required.').should('have.css', 'border').and('match', /0px none rgb(218, 3, 44)/)
-cy.get('#member-number-error').should('contain', 'This field is required.').should('have.css', 'border').and('match', /0px none rgb(218, 3, 44)/)
+cy.get('#scheme-error').should('contain', 'This field is required.').should('have.css', 'border')
+cy.get('#fullName-error').should('contain', 'This field is required.').should('have.css', 'border')
+cy.get('#DOB-error').should('contain', 'This field is required.').should('have.css', 'border')
+cy.get('#member-number-error').should('contain', 'This field is required.').should('have.css', 'border')
   })
-
   })
   })
 })
