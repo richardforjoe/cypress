@@ -29,8 +29,8 @@ it('cy.reload() - reload the page', () => {
     // https://on.cypress.io/reload
     cy.reload()
   })
-it('.submit() - submit a form for ${user.typeofmember} Member and ${user.scheme}', function ()  {
-
+it(`.submit() - submit a form for ${user.typeofmember} Member and ${user.scheme}`, function ()  {
+// User back ticks ` to pass parameters ${user...}
     //const count = 0
     cy.get('#type-of-member').select(user.typeofmember);
     cy.get('#scheme').select(user.scheme);
